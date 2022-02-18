@@ -19,6 +19,7 @@ LargeDeformationJ2Plasticity::validParams()
 LargeDeformationJ2Plasticity::LargeDeformationJ2Plasticity(const InputParameters & parameters)
   : LargeDeformationPlasticityModel(parameters)
 {
+  _check_range = true;
 }
 
 void
