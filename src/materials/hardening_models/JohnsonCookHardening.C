@@ -82,7 +82,8 @@ ADReal
 JohnsonCookHardening::initialGuess(const ADReal & effective_trial_stress)
 {
   ADReal trial_over_stress = effective_trial_stress / _sigma_0[_qp] / temperatureDependence() - _A;
-  return _ep0 * std::pow(trial_over_stress / _B, 1 / _n);
+  return std::max(_ep0 * std::pow(trial_over_stress / _B, 1 / _n),
+                  libMesh::TOLERANCE * libMesh::TOLERANCE);
 }
 
 ADReal
@@ -114,27 +115,36 @@ JohnsonCookHardening::plasticDissipation(const ADReal & delta_ep,
                                          const ADReal & ep,
                                          const unsigned int derivative)
 {
-  if (MooseUtils::absoluteFuzzyEqual(delta_ep, 0))
-    return 0;
+  ADReal result = 0;
 
   if (derivative == 0)
-    return _sigma_0[_qp] *
-           ((_A + _B * std::pow(ep / _ep0, _n)) *
-            (_tqf + _C * std::log(delta_ep / _dt / _epdot0) - _C) * delta_ep) *
-           temperatureDependence();
+  {
+    ADReal result = (_A + _B * std::pow(ep / _ep0, _n)) * _tqf * delta_ep;
+    if (_t_step > 0 && delta_ep > libMesh::TOLERANCE * libMesh::TOLERANCE)
+      result += (_A + _B * std::pow(ep / _ep0, _n)) *
+                (_C * std::log(delta_ep / _dt / _epdot0) - _C) * delta_ep;
+    result *= _sigma_0[_qp] * temperatureDependence();
+  }
 
   if (derivative == 1)
-    return _sigma_0[_qp] *
-           ((_A + _B * std::pow(ep / _ep0, _n)) *
-            (_tqf + _C * std::log(delta_ep / _dt / _epdot0))) *
-           temperatureDependence();
+  {
+    ADReal result = (_A + _B * std::pow(ep / _ep0, _n)) * _tqf;
+    if (_t_step > 0 && delta_ep > libMesh::TOLERANCE * libMesh::TOLERANCE)
+      result += (_A + _B * std::pow(ep / _ep0, _n)) * (_C * std::log(delta_ep / _dt / _epdot0));
+    result *= _sigma_0[_qp] * temperatureDependence();
+  }
 
   if (derivative == 2)
-    return _sigma_0[_qp] *
-           ((_A + _B * std::pow(ep / _ep0, _n)) * _C / delta_ep +
-            _B * std::pow(ep / _ep0, _n) * _n / ep *
-                (_tqf + _C * std::log(delta_ep / _dt / _epdot0))) *
-           temperatureDependence();
+  {
+    ADReal result = _B * std::pow(ep / _ep0, _n - 1) * _n / _ep0 * _tqf;
+    if (_t_step > 0 && delta_ep > libMesh::TOLERANCE * libMesh::TOLERANCE)
+      result +=
+          (_A + _B * std::pow(ep / _ep0, _n)) * _C / delta_ep +
+          _B * std::pow(ep / _ep0, _n - 1) * _n / _ep0 * _C * std::log(delta_ep / _dt / _epdot0);
+    result *= _sigma_0[_qp] * temperatureDependence();
+  }
+
+  return result;
 
   mooseError(name(), "internal error: unsupported derivative order.");
 }
