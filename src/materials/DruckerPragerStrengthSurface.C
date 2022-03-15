@@ -3,12 +3,12 @@
 //* http://dolbow.pratt.duke.edu
 
 #include "Function.h"
-#include "StrengthSurface.h"
+#include "DruckerPragerStrengthSurface.h"
 
-registerADMooseObject("raccoonApp", StrengthSurface);
+registerADMooseObject("raccoonApp", DruckerPragerStrengthSurface);
 
 InputParameters
-StrengthSurface::validParams()
+DruckerPragerStrengthSurface::validParams()
 {
   InputParameters params = Material::validParams();
   params += BaseNameInterface::validParams();
@@ -24,7 +24,7 @@ StrengthSurface::validParams()
   return params;
 }
 
-StrengthSurface::StrengthSurface(const InputParameters & parameters)
+DruckerPragerStrengthSurface::DruckerPragerStrengthSurface(const InputParameters & parameters)
   : Material(parameters),
     BaseNameInterface(parameters),
     _sigma_ts(getParam<Real>("tensile_strength")),
@@ -35,7 +35,7 @@ StrengthSurface::StrengthSurface(const InputParameters & parameters)
 }
 
 void
-StrengthSurface::computeQpProperties()
+DruckerPragerStrengthSurface::computeQpProperties()
 {
   // Invariants of the stress
   ADReal I1 = _stress[_qp].trace();
