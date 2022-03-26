@@ -1,0 +1,103 @@
+<!DOCTYPE html><head><meta charset="UTF-8"><title>MeshGenerator | RACCOON</title><link rel="icon" type="image/x-icon" href="../../media/raccoon_icon.png" sizes="16x16 32x32 64x64 128x128"></link><link href="../../contrib/materialize/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"></link><link href="../../contrib/prism/prism.min.css" type="text/css" rel="stylesheet"></link><link href="../../css/moose.css" type="text/css" rel="stylesheet"></link><link href="../../css/devel_moose.css" type="text/css" rel="stylesheet"></link><link href="../../css/alert_moose.css" type="text/css" rel="stylesheet"></link><link href="../../css/content_moose.css" type="text/css" rel="stylesheet"></link><link href="../../css/sqa_moose.css" type="text/css" rel="stylesheet"></link><link href="../../css/civet_moose.css" type="text/css" rel="stylesheet"></link><script type="text/javascript" src="../../contrib/jquery/jquery.min.js"></script></head><body><div class="page-wrap"><header><nav><div class="nav-wrapper container"><a href="../../index.html" class="left moose-logo hide-on-med-and-down" id="home-button">RACCOON</a><a href="https://github.com/hugary1995/raccoon" class="right"><img src="../../media/framework/github-logo.png" class="github-mark"></img><img src="../../media/framework/github-mark.png" class="github-logo"></img></a><ul class="right hide-on-med-and-down"><li><a href="#!" class="dropdown-trigger" data-target="f02e3680-395d-4693-9174-c35ae267438d" data-constrainWidth="false">Getting Started<i class="material-icons right">arrow_drop_down</i></a></li><li><a href="#!" class="dropdown-trigger" data-target="95b65a8e-a2f0-4a20-bc3a-95caeb382f0b" data-constrainWidth="false">Tutorials<i class="material-icons right">arrow_drop_down</i></a></li><li><a href="#!" class="dropdown-trigger" data-target="1fc3c78c-fdad-4ada-81e9-f6b98aa0ed6a" data-constrainWidth="false">Theory<i class="material-icons right">arrow_drop_down</i></a></li><li><a href="#!" class="dropdown-trigger" data-target="d0ab4209-cb9f-4365-a26a-e693fe9fa32b" data-constrainWidth="false">Documentation<i class="material-icons right">arrow_drop_down</i></a></li><li><a href="../../contribute/index.html">Contribute</a></li></ul><a href="#" class="sidenav-trigger" data-target="04e65796-7119-41d8-a2d3-f68cdaae8b8e"><i class="material-icons">menu</i></a><ul class="sidenav" id="04e65796-7119-41d8-a2d3-f68cdaae8b8e"><li><a href="#!" class="dropdown-trigger" data-target="5e360781-01a2-459d-a615-a9a16a84bff1" data-constrainWidth="false">Getting Started<i class="material-icons right">arrow_drop_down</i></a></li><li><a href="#!" class="dropdown-trigger" data-target="9f0def95-a102-492f-aed8-15a6a9adee04" data-constrainWidth="false">Tutorials<i class="material-icons right">arrow_drop_down</i></a></li><li><a href="#!" class="dropdown-trigger" data-target="34555a1b-5ea6-4487-9067-89eab5a7fa64" data-constrainWidth="false">Theory<i class="material-icons right">arrow_drop_down</i></a></li><li><a href="#!" class="dropdown-trigger" data-target="c349868b-ec66-4143-b0eb-013c5489d58c" data-constrainWidth="false">Documentation<i class="material-icons right">arrow_drop_down</i></a></li><li><a href="../../contribute/index.html">Contribute</a></li></ul><a href="#moose-search" class="modal-trigger"><i class="material-icons">search</i></a></div><ul class="dropdown-content" id="f02e3680-395d-4693-9174-c35ae267438d"><li><a href="../../getting_started/install.html">Install RACCOON</a></li><li><a href="../../getting_started/update.html">Update RACCOON</a></li><li><a href="../../getting_started/running.html">Running your first model</a></li><li><a href="../../getting_started/paraview.html">Visualization</a></li><li><a href="../../getting_started/ide.html">Code development</a></li><li><a href="../../getting_started/docs.html">Browse the documentation locally</a></li></ul><ul class="dropdown-content" id="95b65a8e-a2f0-4a20-bc3a-95caeb382f0b"><li><a href="../../tutorials/01_small_deformation_elasticity.html">1. Small deformation</a></li><li><a href="../../tutorials/02_mode1_brittle_fracture.html">2. Mode-I fracture</a></li><li><a href="../../tutorials/03_mode2_brittle_fracture.html">3. Mode-II fracture</a></li><li><a href="../../tutorials/04_fiber_reinforced_matrix.html">4. Fiber-reinforced matrix</a></li><li><a href="../../tutorials/05_soil_desiccation.html">5. Soil desiccation</a></li><li><a href="../../tutorials/06_large_deformation_elasticity.html">6. Large deformation</a></li><li><a href="../../tutorials/07_elastoplasticity.html">7. Elastoplasticity</a></li><li><a href="../../tutorials/08_ductile_fracture.html">8. Ductile fracture</a></li><li><a href="../../tutorials/09_three_point_bending.html">9. Three-point bending</a></li><li><a href="../../tutorials/10_quenching_bibeam.html">10. Quenching of bi-beam</a></li><li><a href="../../tutorials/11_adaptivity.html">11. Adaptive mesh refinement</a></li><li><a href="../../tutorials/12_nucleation.html">12. Crack nucleation</a></li><li><a href="../../tutorials/13_traction_separation.html">13. Traction separation law</a></li></ul><ul class="dropdown-content" id="1fc3c78c-fdad-4ada-81e9-f6b98aa0ed6a"><li><a href="../../theory/intro.html">Introduction</a></li><li><a href="../../theory/kinematics.html">State variables and kinematics</a></li><li><a href="../../theory/thermodynamics.html">Thermodynamics</a></li><li><a href="../../theory/minimization.html">The minimization problem</a></li><li><a href="../../theory/constitutive_models.html">Constitutive Models</a></li></ul><ul class="dropdown-content" id="d0ab4209-cb9f-4365-a26a-e693fe9fa32b"><li><a href="../../modules/index.html">Physics modules</a></li><li><a href="../../syntax/index.html">Complete syntax</a></li><li><a href="../../syntax/raccoon.html">RACCOON syntax</a></li><li><a href="../../syntax/tensor_mechanics.html">Tensor mechanics syntax</a></li><li><a href="../../syntax/phase_field.html">Phase field syntax</a></li><li><a href="../../syntax/heat_conduction.html">Heat conduction syntax</a></li></ul><ul class="dropdown-content" id="5e360781-01a2-459d-a615-a9a16a84bff1"><li><a href="../../getting_started/install.html">Install RACCOON</a></li><li><a href="../../getting_started/update.html">Update RACCOON</a></li><li><a href="../../getting_started/running.html">Running your first model</a></li><li><a href="../../getting_started/paraview.html">Visualization</a></li><li><a href="../../getting_started/ide.html">Code development</a></li><li><a href="../../getting_started/docs.html">Browse the documentation locally</a></li></ul><ul class="dropdown-content" id="9f0def95-a102-492f-aed8-15a6a9adee04"><li><a href="../../tutorials/01_small_deformation_elasticity.html">1. Small deformation</a></li><li><a href="../../tutorials/02_mode1_brittle_fracture.html">2. Mode-I fracture</a></li><li><a href="../../tutorials/03_mode2_brittle_fracture.html">3. Mode-II fracture</a></li><li><a href="../../tutorials/04_fiber_reinforced_matrix.html">4. Fiber-reinforced matrix</a></li><li><a href="../../tutorials/05_soil_desiccation.html">5. Soil desiccation</a></li><li><a href="../../tutorials/06_large_deformation_elasticity.html">6. Large deformation</a></li><li><a href="../../tutorials/07_elastoplasticity.html">7. Elastoplasticity</a></li><li><a href="../../tutorials/08_ductile_fracture.html">8. Ductile fracture</a></li><li><a href="../../tutorials/09_three_point_bending.html">9. Three-point bending</a></li><li><a href="../../tutorials/10_quenching_bibeam.html">10. Quenching of bi-beam</a></li><li><a href="../../tutorials/11_adaptivity.html">11. Adaptive mesh refinement</a></li><li><a href="../../tutorials/12_nucleation.html">12. Crack nucleation</a></li><li><a href="../../tutorials/13_traction_separation.html">13. Traction separation law</a></li></ul><ul class="dropdown-content" id="34555a1b-5ea6-4487-9067-89eab5a7fa64"><li><a href="../../theory/intro.html">Introduction</a></li><li><a href="../../theory/kinematics.html">State variables and kinematics</a></li><li><a href="../../theory/thermodynamics.html">Thermodynamics</a></li><li><a href="../../theory/minimization.html">The minimization problem</a></li><li><a href="../../theory/constitutive_models.html">Constitutive Models</a></li></ul><ul class="dropdown-content" id="c349868b-ec66-4143-b0eb-013c5489d58c"><li><a href="../../modules/index.html">Physics modules</a></li><li><a href="../../syntax/index.html">Complete syntax</a></li><li><a href="../../syntax/raccoon.html">RACCOON syntax</a></li><li><a href="../../syntax/tensor_mechanics.html">Tensor mechanics syntax</a></li><li><a href="../../syntax/phase_field.html">Phase field syntax</a></li><li><a href="../../syntax/heat_conduction.html">Heat conduction syntax</a></li></ul></nav><div class="modal modal-fixed-footer moose-search-modal" id="moose-search"><div class="modal-content container moose-search-modal-content"><div class="gcse-search"></div></div><div class="modal-footer"><a href="#!" class="modal-close btn-flat">Close</a></div></div></header><main class="main"><div class="container"><div class="row"><div class="moose-content col s12 m12 l12"><section id="a3f0d4bd-032d-4b51-b96a-bfd5aa7441e3" data-section-level="1" data-section-text="MeshGenerator"><h1 id="meshgenerator">MeshGenerator</h1><p>This is the base class for the <code>MeshGenerator</code> system.</p><p>There are two types of mesh generators:</p><ul class="browser-default"><li><p>Those who create a mesh (examples: <a href="GeneratedMeshGenerator.html">GeneratedMeshGenerator</a>, <a href="AnnularMeshGenerator.html">AnnularMeshGenerator</a>, <a href="FileMeshGenerator.html">FileMeshGenerator</a>). </p></li><li><p>Those who modify an existing mesh (examples: <a href="MeshExtruderGenerator.html">MeshExtruderGenerator</a>, <a href="StitchedMeshGenerator.html">StitchedMeshGenerator</a>, <a href="RenameBlockGenerator.html">RenameBlockGenerator</a>, <a href="RenameBoundaryGenerator.html">RenameBoundaryGenerator</a>).</p></li></ul><p>The purpose of these objects is to create complex meshes using only one input file. Indeed, you can use several MeshGenerator blocks in your input file. Those represent the different steps necessary to create your complex mesh. Note that an option exists for printing mesh information to screen (see <a href="MeshGenerator.html#showing-mesh-information">Showing Mesh Information</a>) for tracking down problems when generating complex meshes with multiple mesh generators.</p><section id="600ecb58-8583-48e2-ba30-9aec5c4102ed" data-section-level="2" data-section-text="Input File Example"><h2 id="input-file-example">Input File Example</h2><pre class="moose-pre"><code class="language-text">
+[Mesh]
+  [gmg]
+    type = GeneratedMeshGenerator
+    dim = 3
+    nx = 3
+    ny = 3
+    nz = 3
+  []
+
+  [tmg]
+    type = TiledMeshGenerator
+    input = gmg
+    x_width = 1
+    y_width = 1
+    z_width = 1
+
+    left_boundary = left
+    right_boundary = right
+    top_boundary = top
+    bottom_boundary = bottom
+    front_boundary = front
+    back_boundary = back
+
+    x_tiles = 2
+    y_tiles = 1
+    z_tiles = 5
+  []
+[]
+
+[Outputs]
+  exodus = true
+[]
+</code></pre><p>Let&#x27;s analyze the different steps. First, we use a <a href="GeneratedMeshGenerator.html">GeneratedMeshGenerator</a> to create a 3D mesh labeled <code>gmg</code> (here it&#x27;s simply a regular cube). After that, we use this mesh as an input (via <code>input = gmg</code>) to create a larger mesh using a <a href="TiledMeshGenerator.html">TiledMeshGenerator</a>.</p></section><section id="49a793bf-3194-4ca6-9c24-22a150063183" data-section-level="2" data-section-text="Developing a MeshGenerator"><h2 id="developing-a-meshgenerator">Developing a MeshGenerator</h2><p>For mesh generators that create a mesh, care must be taken as to the parallel type of the mesh. You will override the <code>generate()</code> method, obtain a base mesh object, and then return your generated mesh. For obtaining the base mesh object, there are three options:</p><ul class="browser-default"><li><p>If the mesh to be generated is agnostic to the parallel type (that is, it can be either replicated or distributed), use <code>MeshGenerator::buildMeshBaseObject()</code> to generate the base mesh. See <a href="GeneratedMeshGenerator.html">GeneratedMeshGenerator</a> for an example. </p></li><li><p>If the mesh to be generated is only replicated, use <code>MeshGenerator::buildReplicatedMesh()</code> to generate the base mesh. </p></li><li><p>If the mesh to be generated is only distributed, use <code>MeshGenerator::buildDistributedMesh()</code> to generate the base mesh. See <a href="DistributedRectilinearMeshGenerator.html">DistributedRectilinearMeshGenerator</a> for an example.</p></li></ul><p>You should <strong>only</strong> use these APIs to create the base mesh in generators that create meshes. This is very important, because the internal preparation of the meshes for use is dependent on the parallel type of the mesh.</p><p>For mesh generators that modify an existing mesh, you should have as an input parameter a <code>MeshGeneratorName</code> (or multiple, as a <code>std::vector&lt;MeshGeneratorName&gt;</code> if applicable) to obtain the mesh(es) to modify. You can then obtain said meshes via <code>MeshGenerator::getMesh()</code> and <code>MeshGenerator::getMeshByName()</code>. For examples, see <a href="RenameBoundaryGenerator.html">RenameBoundaryGenerator</a> and <a href="StitchedMeshGenerator.html">StitchedMeshGenerator</a>. You then act on said meshes by overriding the <code>generate()</code> method, and returning the resulting mesh.</p><p>Your mesh generator can instantiate subgenerators itself, to create existing meshes for the primary generator to combine and/or modify.  The easiest way to do this is to call <code>MeshGenerator::addMeshSubgenerator()</code>, which takes as arguments the generator class name and object name to instantiate, followed by an arbitrary number of name/value pairs of subgenerator parameters to set, and which returns a reference to the mesh which the subgenerator will create before the primary <code>generate()</code> is called.</p></section><section id="963a4a57-dd76-4fcc-af9e-db9afc91ad54" data-section-level="2" data-section-text="Showing Mesh Information"><h2 id="showing-mesh-information">Showing Mesh Information</h2><p>The parameter <a href="#16acfcd2-0bb0-488e-8fe9-e6690efd3b1e" class="moose-modal-link modal-trigger">&quot;show_info&quot;</a> prints to screen detailed information about a mesh immediately after it is generated. It can be used to quickly verify properties about the mesh such as: sidesets, subdomains, and volumes.</p><p>Take the simple example:</p><pre class="moose-pre"><code class="language-text">
+[Mesh]
+  [gmg]
+    type = GeneratedMeshGenerator
+    dim = 2
+    nx = 2
+    ny = 2
+    show_info = true
+  []
+</code></pre><p>The above will result in on-screen output similar to the following (ran with two processes):</p><pre class="moose-pre"><code class="language-text">
+GeneratedMeshGenerator &#x27;gmg&#x27;:  Mesh Information:
+GeneratedMeshGenerator &#x27;gmg&#x27;:   elem_dimensions()={2}
+GeneratedMeshGenerator &#x27;gmg&#x27;:   spatial_dimension()=2
+GeneratedMeshGenerator &#x27;gmg&#x27;:   n_nodes()=25
+GeneratedMeshGenerator &#x27;gmg&#x27;:     n_local_nodes()=15
+GeneratedMeshGenerator &#x27;gmg&#x27;:   n_elem()=16
+GeneratedMeshGenerator &#x27;gmg&#x27;:     n_local_elem()=8
+GeneratedMeshGenerator &#x27;gmg&#x27;:     n_active_elem()=16
+GeneratedMeshGenerator &#x27;gmg&#x27;:   n_subdomains()=1
+GeneratedMeshGenerator &#x27;gmg&#x27;:   n_partitions()=2
+GeneratedMeshGenerator &#x27;gmg&#x27;:   n_processors()=2
+GeneratedMeshGenerator &#x27;gmg&#x27;:   n_threads()=1
+GeneratedMeshGenerator &#x27;gmg&#x27;:   processor_id()=0
+GeneratedMeshGenerator &#x27;gmg&#x27;:   is_prepared()=true
+GeneratedMeshGenerator &#x27;gmg&#x27;:   is_replicated()=true
+GeneratedMeshGenerator &#x27;gmg&#x27;:
+GeneratedMeshGenerator &#x27;gmg&#x27;:  Mesh Bounding Box:
+GeneratedMeshGenerator &#x27;gmg&#x27;:   Minimum: (x,y,z)=(       0,        0,        0)
+GeneratedMeshGenerator &#x27;gmg&#x27;:   Maximum: (x,y,z)=(       1,        1,        0)
+GeneratedMeshGenerator &#x27;gmg&#x27;:   Delta:   (x,y,z)=(       1,        1,        0)
+GeneratedMeshGenerator &#x27;gmg&#x27;:
+GeneratedMeshGenerator &#x27;gmg&#x27;:  Mesh Element Type(s):
+GeneratedMeshGenerator &#x27;gmg&#x27;:   QUAD4
+GeneratedMeshGenerator &#x27;gmg&#x27;:
+GeneratedMeshGenerator &#x27;gmg&#x27;:  Mesh Nodesets:
+GeneratedMeshGenerator &#x27;gmg&#x27;:   None
+GeneratedMeshGenerator &#x27;gmg&#x27;:
+GeneratedMeshGenerator &#x27;gmg&#x27;:  Mesh Sidesets:
+GeneratedMeshGenerator &#x27;gmg&#x27;:   Sideset 0 (bottom), 4 sides (EDGE2), 4 elems (QUAD4), 5 nodes
+GeneratedMeshGenerator &#x27;gmg&#x27;:    Side volume: 1
+GeneratedMeshGenerator &#x27;gmg&#x27;:    Bounding box minimum: (x,y,z)=(       0,        0,        0)
+GeneratedMeshGenerator &#x27;gmg&#x27;:    Bounding box maximum: (x,y,z)=(       1,        0,        0)
+GeneratedMeshGenerator &#x27;gmg&#x27;:    Bounding box delta: (x,y,z)=(       1,        0,        0)
+GeneratedMeshGenerator &#x27;gmg&#x27;:   Sideset 1 (right), 4 sides (EDGE2), 4 elems (QUAD4), 5 nodes
+GeneratedMeshGenerator &#x27;gmg&#x27;:    Side volume: 1
+GeneratedMeshGenerator &#x27;gmg&#x27;:    Bounding box minimum: (x,y,z)=(       1,        0,        0)
+GeneratedMeshGenerator &#x27;gmg&#x27;:    Bounding box maximum: (x,y,z)=(       1,        1,        0)
+GeneratedMeshGenerator &#x27;gmg&#x27;:    Bounding box delta: (x,y,z)=(       0,        1,        0)
+GeneratedMeshGenerator &#x27;gmg&#x27;:   Sideset 2 (top), 4 sides (EDGE2), 4 elems (QUAD4), 5 nodes
+GeneratedMeshGenerator &#x27;gmg&#x27;:    Side volume: 1
+GeneratedMeshGenerator &#x27;gmg&#x27;:    Bounding box minimum: (x,y,z)=(       0,        1,        0)
+GeneratedMeshGenerator &#x27;gmg&#x27;:    Bounding box maximum: (x,y,z)=(       1,        1,        0)
+GeneratedMeshGenerator &#x27;gmg&#x27;:    Bounding box delta: (x,y,z)=(       1,        0,        0)
+GeneratedMeshGenerator &#x27;gmg&#x27;:   Sideset 3 (left), 4 sides (EDGE2), 4 elems (QUAD4), 5 nodes
+GeneratedMeshGenerator &#x27;gmg&#x27;:    Side volume: 1
+GeneratedMeshGenerator &#x27;gmg&#x27;:    Bounding box minimum: (x,y,z)=(       0,        0,        0)
+GeneratedMeshGenerator &#x27;gmg&#x27;:    Bounding box maximum: (x,y,z)=(       0,        1,        0)
+GeneratedMeshGenerator &#x27;gmg&#x27;:    Bounding box delta: (x,y,z)=(       0,        1,        0)
+GeneratedMeshGenerator &#x27;gmg&#x27;:
+GeneratedMeshGenerator &#x27;gmg&#x27;:  Mesh Edgesets:
+GeneratedMeshGenerator &#x27;gmg&#x27;:   None
+GeneratedMeshGenerator &#x27;gmg&#x27;:
+GeneratedMeshGenerator &#x27;gmg&#x27;:  Mesh Subdomains:
+GeneratedMeshGenerator &#x27;gmg&#x27;:   Subdomain 0: 16 elems (QUAD4, 16 active), 25 active nodes
+GeneratedMeshGenerator &#x27;gmg&#x27;:    Volume: 1
+GeneratedMeshGenerator &#x27;gmg&#x27;:    Bounding box minimum: (x,y,z)=(       0,        0,        0)
+GeneratedMeshGenerator &#x27;gmg&#x27;:    Bounding box maximum: (x,y,z)=(       1,        1,        0)
+GeneratedMeshGenerator &#x27;gmg&#x27;:    Bounding box delta: (x,y,z)=(       1,        1,        0)
+GeneratedMeshGenerator &#x27;gmg&#x27;:   Global mesh volume = 1
+</code></pre></section></section><div class="moose-modal modal" id="16acfcd2-0bb0-488e-8fe9-e6690efd3b1e"><div class="modal-content"><h4>show_info</h4><p class="moose-parameter-description-default"><span>Default:</span>False</p><p class="moose-parameter-description-cpptype"><span>C++ Type:</span>bool</p><p class="moose-parameter-description-controllable"><span>Controllable:</span>No</p><p class="moose-parameter-description"><span>Description:</span>Whether or not to show mesh info after generating the mesh (bounding box, element types, sidesets, nodesets, subdomains, etc)</p></div></div></div></div></div></main></div></body><script type="text/javascript" src="../../contrib/materialize/materialize.min.js"></script><script type="text/javascript" src="../../contrib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="../../contrib/prism/prism.min.js"></script><script type="text/javascript" src="../../js/init.js"></script><script type="text/javascript" src="../../js/navigation.js"></script><script type="text/javascript" src="https://cse.google.com/cse.js?cx=008852834041008754713:g3ilnhhbbj9"></script><script type="text/javascript" src="../../js/sqa_moose.js"></script>
